@@ -468,7 +468,7 @@ export default function Portfolio() {
         >
           <div className="relative mb-8">
             <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-              Hi, I'm Prathyusha
+              Hi,Prathyusha here
             </h1>
             <div className="absolute -inset-1 blur-lg opacity-30 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg"></div>
           </div>
@@ -523,7 +523,7 @@ export default function Portfolio() {
               {/* Right - Content */}
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg leading-relaxed">
-                  Hey! I'm <span className="text-purple-400 font-semibold">Prathyusha</span>, a 20-year-old engineering student from Mangaluru, Karnataka. Currently, I am in my fourth year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.
+                  Hey! Myself  <span className="text-purple-400 font-semibold">Prathyusha</span>, a 20-year-old engineering student from Mangaluru, Karnataka. Currently, I am in my fourth year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.
                 </p>
                 
                 {/* Experience Timeline */}
@@ -652,7 +652,7 @@ export default function Portfolio() {
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-                Les Connect
+                Lets Connect
               </h2>
             </div>
             
