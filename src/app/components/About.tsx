@@ -472,22 +472,18 @@ export default function Portfolio() {
     </h1>      
     <div className="absolute -inset-1 blur-lg opacity-30 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg"></div>    
   </div>    
-  <h2 className="text-sm sm:text-sm md:text-xl mb-6 sm:mb-8 text-gray-300 max-w-2xl">      
+  <h2 className="text-sm sm:text-sm md:text-sm mb-6 sm:mb-8 text-gray-300 max-w-2xl">      
     Crafting digital experiences that push boundaries    
   </h2>    
-  <div className="flex flex-row gap-4 w-full max-w-xs sm:max-w-md">      
-    <button         
-      className="flex-1 border border-white hover:border-purple-400 hover:text-purple-400 px-4 sm:px-6 py-3 rounded-lg transition-all hover:scale-105"        
-      onClick={() => navigateTo('contact')}      
-    >        
-      Contact Me      
-    </button>      
-    <button        
-      onClick={handleResumeDownload}        
-      className="flex-1 border border-white hover:border-purple-400 hover:text-purple-400 px-4 sm:px-6 py-3 rounded-lg transition-all hover:scale-105"      
-    >        
-      Resume      
-    </button>    
+  <div className="flex flex-row gap-4  max-w-xs sm:max-w-md">      
+          
+  <button        
+  onClick={handleResumeDownload}        
+  className="flex-1 border border-white hover:border-purple-400 hover:text-purple-300 px-6 py-2 rounded-md transition-all duration-300 hover:scale-[1.03] text-white font-medium tracking-wide"
+>        
+  Resume      
+</button>
+    
   </div>  
 </section>
 
@@ -539,7 +535,7 @@ export default function Portfolio() {
             
             {/* Education Section */}
             <div className="mt-16">
-              <h3 className="text-2xl font-bold text-center mb-8 text-white">Education</h3>
+            <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Education</h3>
               
               <div className="grid md:grid-cols-3 gap-8">
                 {education.map((edu, index) => (
