@@ -568,22 +568,73 @@ export default function Portfolio() {
             
             {/* Skills Section */}
             <div className="mt-16">
-              <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-                Skills & Technologies
-              </h3>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-900 rounded-lg py-4 flex flex-col items-center transition-all hover:scale-105 border border-gray-800"
-                  >
-                    <i className={`text-4xl ${skill.iconClass}`}></i>
-                    <span className="text-sm font-medium mt-2">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+  <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+    Skills & Technologies
+  </h3>
+  
+  <div 
+    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"
+    id="skills-grid"
+  >
+    {skills.map((skill, index) => (
+      <div
+        key={index}
+        className="bg-gray-900 rounded-lg py-4 flex flex-col items-center border border-gray-800 opacity-0 transform translate-y-8 transition-all duration-500"
+        style={{ 
+          transitionDelay: `${index * 100}ms`,
+          animationDelay: `${index * 100}ms`
+        }}
+        data-skill-item
+      >
+        <i className={`text-4xl ${skill.iconClass}`}></i>
+        <span className="text-sm font-medium mt-2">{skill.name}</span>
+      </div>
+    ))}
+  </div>
+</div><script dangerouslySetInnerHTML={{ __html: `
+  document.addEventListener('DOMContentLoaded', () => {
+    const skillsSection = document.getElementById('skills-grid');
+    const skillItems = document.querySelectorAll('[data-skill-item]');
+    
+    // Intersection Observer to detect when skills are in viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add animation class to each skill item with staggered delay
+          skillItems.forEach((item, i) => {
+            setTimeout(() => {
+              item.classList.remove('opacity-0', 'translate-y-8');
+              item.classList.add('opacity-100', 'translate-y-0');
+            }, i * 100);
+          });
+          
+          // Once animation is done, stop observing
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    // Start observing the skills section
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
+    
+    // Optional: Add animation on click of a specific button if needed
+    const skillsNavLink = document.querySelector('a[href="#skills"]');
+    if (skillsNavLink) {
+      skillsNavLink.addEventListener('click', (e) => {
+        // Force animate skills when the skills nav link is clicked
+        skillItems.forEach((item, i) => {
+          item.classList.add('opacity-0', 'translate-y-8');
+          setTimeout(() => {
+            item.classList.remove('opacity-0', 'translate-y-8');
+            item.classList.add('opacity-100', 'translate-y-0');
+          }, i * 100);
+        });
+      });
+    }
+  });
+`}} />
           </div>
         </section>
 
