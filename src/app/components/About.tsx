@@ -472,9 +472,9 @@ export default function Portfolio() {
     </h1>      
     <div className="absolute -inset-1 blur-lg opacity-30 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg"></div>    
   </div>    
-  <h2 className="text-sm sm:text-sm md:text-sm mb-6 sm:mb-8 text-gray-300 max-w-2xl">      
+  <h3 className="text-sm sm:text-sm md:text-sm mb-6 sm:mb-8 text-gray-300 max-w-2xl">      
     Crafting digital experiences that push boundaries    
-  </h2>    
+  </h3>    
   <div className="flex flex-row gap-4  max-w-xs sm:max-w-md">      
           
   <button        
@@ -494,9 +494,9 @@ export default function Portfolio() {
           className="min-h-screen py-24 px-6 flex items-center"
         >
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               About Me
-            </h2>
+            </h3>
             
             <div className="grid md:grid-cols-2 gap-16 items-center">
               {/* Left - Profile Picture */}
@@ -645,9 +645,9 @@ export default function Portfolio() {
           className="min-h-screen py-20 px-4 flex items-center"
         >
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               Projects
-            </h2>
+            </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
@@ -685,69 +685,107 @@ export default function Portfolio() {
         </section>
         
         {/* Contact Section */}
-        <section 
-  ref={contactRef} 
-  id="contact" 
+        <section    
+  ref={contactRef}    
+  id="contact"    
   className="min-h-screen py-20 px-4 flex items-center"
 >
-  <div className="container mx-auto max-w-4xl">
-    <div className="text-center mb-12 sm:mb-16">
-      <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+  <div className="container mx-auto max-w-5xl">
+    <div className="text-center mb-16">
+    <h3 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         Lets Connect
-      </h2>
+        <div className="absolute -bottom-3 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+      </h3>
     </div>
-
-    {/* Contact Card */}
-    <div className="bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
-      <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 sm:p-10">
-        <div>
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">Get in Touch</h3>
-          <p className="text-gray-300 mb-8 text-sm sm:text-base">
-            Feel free to reach out for opportunities or just to say hello!
-          </p>
-
-          <div className="space-y-8">
-            {/* Email */}
-            <a href="mailto:prathyushaacharya050@gmail.com" className="flex items-center group">
-              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
-                <Mail size={22} className="text-purple-400 group-hover:text-white transition-colors" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">prathyushaacharya050@gmail.com</p>
-              </div>
-            </a>
-
-            {/* GitHub */}
-            <a href="https://github.com/prathyushaa5" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
-                <Github size={22} className="text-purple-400 group-hover:text-white transition-colors" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">GitHub</p>
-                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">github.com/prathyushaa5</p>
-              </div>
-            </a>
-
-            {/* LinkedIn */}
-            <a href="https://linkedin.com/in/prathyusha-acharya/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
-                <Linkedin size={22} className="text-purple-400 group-hover:text-white transition-colors" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">LinkedIn</p>
-                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">linkedin.com/in/prathyusha-acharya</p>
-              </div>
-            </a>
+    
+    {/* Interactive Contact Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {/* Email Card */}
+      <a 
+        href="mailto:prathyushaacharya050@gmail.com" 
+        className="relative overflow-hidden rounded-2xl border border-gray-800 group transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 transform group-hover:scale-110 transition-transform duration-500"></div>
+        <div className="relative p-6 flex flex-col items-center text-center z-10 h-full">
+          <div className="w-16 h-16 rounded-full bg-purple-800/30 flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:bg-purple-800/50">
+            <Mail size={28} className="text-purple-400 group-hover:text-white transition-colors" />
+          </div>
+          <h3 className="text-white text-lg font-medium mb-1">Email</h3>
+          <p className="text-gray-300 text-sm break-all">prathyushaacharya050@gmail.com</p>
+          <div className="mt-auto pt-4">
+            <span className="inline-flex items-center text-xs font-medium text-gray-300 group-hover:text-purple-400 transition-colors">
+              Send Mail
+              <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
           </div>
         </div>
-
-        {/* Location */}
-        <div className="mt-10 pt-6 border-t border-gray-700/50">
-          <p className="text-gray-400 text-sm">
-            Current location: <span className="text-white">Mangaluru, Karnataka</span>
-          </p>
+      </a>
+      
+      {/* GitHub Card */}
+      <a 
+        href="https://github.com/prathyushaa5" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="relative overflow-hidden rounded-2xl border border-gray-800 group transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 transform group-hover:scale-110 transition-transform duration-500"></div>
+        <div className="relative p-6 flex flex-col items-center text-center z-10 h-full">
+          <div className="w-16 h-16 rounded-full bg-purple-800/30 flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:bg-purple-800/50">
+            <Github size={28} className="text-purple-400 group-hover:text-white transition-colors" />
+          </div>
+          <h3 className="text-white text-lg font-medium mb-1">GitHub</h3>
+          <p className="text-gray-300 text-sm">github.com/prathyushaa5</p>
+          <div className="mt-auto pt-4">
+            <span className="inline-flex items-center text-xs font-medium text-gray-300 group-hover:text-purple-400 transition-colors">
+              View Profile
+              <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </div>
         </div>
+      </a>
+      
+      {/* LinkedIn Card */}
+      <a 
+        href="https://linkedin.com/in/prathyusha-acharya/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="relative overflow-hidden rounded-2xl border border-gray-800 group transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 transform group-hover:scale-110 transition-transform duration-500"></div>
+        <div className="relative p-6 flex flex-col items-center text-center z-10 h-full">
+          <div className="w-16 h-16 rounded-full bg-purple-800/30 flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:bg-purple-800/50">
+            <Linkedin size={28} className="text-purple-400 group-hover:text-white transition-colors" />
+          </div>
+          <h3 className="text-white text-lg font-medium mb-1">LinkedIn</h3>
+          <p className="text-gray-300 text-sm">linkedin.com/in/prathyusha-acharya</p>
+          <div className="mt-auto pt-4">
+            <span className="inline-flex items-center text-xs font-medium text-gray-300 group-hover:text-purple-400 transition-colors">
+              Connect
+              <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    {/* Location */}
+    <div className="mt-10 text-center">
+      <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-900/70 backdrop-blur-sm border border-gray-800">
+        <div className="w-6 h-6 rounded-full bg-purple-800/30 flex items-center justify-center mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <span className="text-sm text-gray-400">
+          Current location: <span className="text-white">Mangaluru, Karnataka</span>
+        </span>
       </div>
     </div>
   </div>
