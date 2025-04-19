@@ -639,118 +639,63 @@ export default function Portfolio() {
   id="contact" 
   className="min-h-screen py-20 px-4 flex items-center"
 >
-  <div className="container mx-auto max-w-5xl">
+  <div className="container mx-auto max-w-4xl">
     <div className="text-center mb-12 sm:mb-16">
       <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         Lets Connect
       </h2>
     </div>
 
-    {/* Main content */}
+    {/* Contact Card */}
     <div className="bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
-      <div className="grid grid-cols-1 md:grid-cols-5">
-        
-        {/* Left Side */}
-        <div className="md:col-span-2 bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-6 sm:p-8 flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">Get in Touch</h3>
-            <p className="text-gray-300 mb-6 text-sm sm:text-base">
-              Feel free to reach out for opportunities or just to say hello!
-            </p>
+      <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 sm:p-10">
+        <div>
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">Get in Touch</h3>
+          <p className="text-gray-300 mb-8 text-sm sm:text-base">
+            Feel free to reach out for opportunities or just to say hello!
+          </p>
 
-            <div className="space-y-6">
-              {/* Email */}
-              <a href="mailto:prathyushaacharya050@gmail.com" className="flex items-center group">
-                <div className="w-10 h-10 rounded-full bg-purple-800/30 flex items-center justify-center mr-4 group-hover:bg-purple-600 transition-colors">
-                  <Mail size={20} className="text-purple-400 group-hover:text-white transition-colors" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">prathyushaacharya050@gmail.com</p>
-                </div>
-              </a>
+          <div className="space-y-8">
+            {/* Email */}
+            <a href="mailto:prathyushaacharya050@gmail.com" className="flex items-center group">
+              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
+                <Mail size={22} className="text-purple-400 group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">prathyushaacharya050@gmail.com</p>
+              </div>
+            </a>
 
-              {/* GitHub */}
-              <a href="https://github.com/prathyushaa5" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                <div className="w-10 h-10 rounded-full bg-purple-800/30 flex items-center justify-center mr-4 group-hover:bg-purple-600 transition-colors">
-                  <Github size={20} className="text-purple-400 group-hover:text-white transition-colors" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400">GitHub</p>
-                  <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">github.com/prathyushaa5</p>
-                </div>
-              </a>
+            {/* GitHub */}
+            <a href="https://github.com/prathyushaa5" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
+                <Github size={22} className="text-purple-400 group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">GitHub</p>
+                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">github.com/prathyushaa5</p>
+              </div>
+            </a>
 
-              {/* LinkedIn */}
-              <a href="https://linkedin.com/in/prathyusha-acharya/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                <div className="w-10 h-10 rounded-full bg-purple-800/30 flex items-center justify-center mr-4 group-hover:bg-purple-600 transition-colors">
-                  <Linkedin size={20} className="text-purple-400 group-hover:text-white transition-colors" />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400">LinkedIn</p>
-                  <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">linkedin.com/in/prathyusha-acharya</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* Always show location */}
-          <div className="mt-8 pt-6 border-t border-gray-700/50">
-            <p className="text-gray-400 text-sm">
-              Current location: <span className="text-white">Mangaluru, Karnataka</span>
-            </p>
+            {/* LinkedIn */}
+            <a href="https://linkedin.com/in/prathyusha-acharya/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+              <div className="w-12 h-12 rounded-full bg-purple-800/30 flex items-center justify-center mr-5 group-hover:bg-purple-600 transition-colors">
+                <Linkedin size={22} className="text-purple-400 group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">LinkedIn</p>
+                <p className="text-white group-hover:text-purple-400 transition-colors text-sm sm:text-base">linkedin.com/in/prathyusha-acharya</p>
+              </div>
+            </a>
           </div>
         </div>
 
-        {/* Right Side - Form */}
-        <div className="md:col-span-3 p-6 sm:p-8">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">Send me a message</h3>
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-gray-800/70 rounded-lg p-3 border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 outline-none placeholder-gray-500 transition-all" 
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full bg-gray-800/70 rounded-lg p-3 border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 outline-none placeholder-gray-500 transition-all" 
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2 text-gray-300">Message</label>
-              <textarea 
-                rows={5} 
-                className="w-full bg-gray-800/70 rounded-lg p-3 border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 outline-none placeholder-gray-500 transition-all" 
-                placeholder="Write your message..."
-              />
-            </div>
-
-            <button 
-              type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 py-3 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all hover:shadow-lg hover:shadow-purple-500/20 focus:ring-2 focus:ring-purple-500/50 outline-none group"
-            >
-              <span className="flex items-center justify-center">
-                Send Message
-                <svg 
-                  className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-            </button>
-          </form>
+        {/* Location */}
+        <div className="mt-10 pt-6 border-t border-gray-700/50">
+          <p className="text-gray-400 text-sm">
+            Current location: <span className="text-white">Mangaluru, Karnataka</span>
+          </p>
         </div>
       </div>
     </div>
