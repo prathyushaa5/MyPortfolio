@@ -513,7 +513,7 @@ export default function Portfolio() {
               {/* Right - Content */}
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg leading-relaxed">
-                  Hey! Myself  <span className="text-purple-400 font-semibold">Prathyusha</span>, a 20-year-old engineering student from Mangaluru, Karnataka. Currently, I am in my fourth year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.
+                  Hey! Myself  <span className="text-purple-400 font-semibold">Prathyusha</span>, a 21-year-old engineering student from Mangaluru, Karnataka. Currently, I am in my fourth year of studying Computer Science at St. Joseph Engineering College, Mangalore. Passionate about technology and problem-solving, I am eager to continue expanding my knowledge and skills in the field of computer science.
                 </p>
                 
                 {/* Experience Timeline */}
