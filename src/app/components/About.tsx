@@ -468,7 +468,7 @@ export default function Portfolio() {
 >    
   <div className="relative mb-6 sm:mb-8">      
     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">        
-      Hi, Prathyusha here      
+     Prathyusha Acharya     
     </h1>      
     <div className="absolute -inset-1 blur-lg opacity-30 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg"></div>    
   </div>    
